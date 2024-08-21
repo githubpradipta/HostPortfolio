@@ -15,7 +15,7 @@ app.use("/api/v1",projectRoute);
 app.use("/api/v1",contactRoute);
 
 app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname + "/Client/build/index.html"))
+    path.join(process.cwd(),'Client','build','index.html')
 })
 
 const PORT=8000;
