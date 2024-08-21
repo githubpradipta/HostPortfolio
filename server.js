@@ -7,7 +7,7 @@ const connection = require("./Model/Connection")
 
 const app=express()
 app.use(express.json())
-app.use(express.static(path.join(__dirname + "/public")))
+app.use(express.static(path.join(__dirname + "/build")))
 app.use("/api/v1",projectRoute);
 app.use("/api/v1",contactRoute);
 
