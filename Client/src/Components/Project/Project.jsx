@@ -15,7 +15,7 @@ export default function Project(props) {
   const abortController = new AbortController();
   const signal = abortController.signal;
   useEffect(() => {
-    axios.get('api/v1/projects', { signal })
+    axios.get('api/v1/myprojects', { signal })
       .then((res) => {
         console.log(res);
         

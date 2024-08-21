@@ -3,13 +3,13 @@ const Route=express.Router();
 const {getAllProjects,creatProject,getProjectsByName,deleteAllProjets} = require("../Controllers/ProjectsController")
 Route
 // Returns all the porject records
-.get('/projects',getAllProjects) 
+.get('/myprojects',getAllProjects) 
 // Return the project on the basis of given id
-.get('/project/:id',getProjectsByName) 
+.get('/myproject/:id',getProjectsByName) 
 // For creating one project record
-.post('/project',creatProject)
+.post('/myproject',creatProject)
 
-.delete('/projects',deleteAllProjets)
+.delete('/myprojects',deleteAllProjets)
 
 
 module.exports=Route;

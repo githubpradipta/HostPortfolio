@@ -10,7 +10,7 @@ export default function Oneproject() {
     const [projectDetails, setProjectDetails] = useState({ title: "", shortDesc: "", Desc: "", tech: [], githubLink: "", imgLink: "" })
     const params = useParams();
     useEffect(() => {
-        axios.get(`/api/v1/project/${params.projectID}`)
+        axios.get(`/api/v1/myproject/${params.projectID}`)
             .then((res) => {
                 setProjectDetails(res.data)
 
