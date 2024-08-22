@@ -18,7 +18,8 @@ app.get("*",(req,res)=>{
     path.join(process.cwd(),'build','index.html')
 })
 
-const PORT=8000;
+const PORT=process.env.PORT || 10000;
+
 app.listen(PORT, '127.0.0.1', () => {
     console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
