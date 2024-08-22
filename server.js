@@ -10,12 +10,12 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-app.use(express.static(path.join(__dirname + "/Client/build")));
+app.use(express.static(path.join(__dirname + "/build")));
 app.use("/api/v1",projectRoute);
 app.use("/api/v1",contactRoute);
 
 app.get("*",(req,res)=>{
-    path.join(process.cwd(),'Client','build','index.html')
+    path.join(process.cwd(),'build','index.html')
 })
 
 const PORT=8000;
