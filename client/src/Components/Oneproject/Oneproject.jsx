@@ -13,7 +13,8 @@ export default function Oneproject() {
         axios.get(`/api/v1/myproject/${params.projectID}`)
             .then((res) => {
                 setProjectDetails(res.data)
-
+                console.log(res);
+                
                 setLoading(false);
             })
     }, [])

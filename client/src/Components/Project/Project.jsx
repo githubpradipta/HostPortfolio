@@ -67,7 +67,7 @@ export default function Project(props) {
                           (projects.map((project, i) => {
                             return (
                               <div className="project" key={i}>
-                                <Link className="projectlink" to={`/myproject/${project._id}`}>
+                                <Link className="projectlink" to={`/project/${project._id}`}>
 
                                   <img src={`${project.imgLink}`} alt="" />
                                   <div className="overlay">
