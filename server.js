@@ -14,9 +14,9 @@ app.use(express.static(path.join(__dirname + "/build")));
 app.use("/api/v1",projectRoute);
 app.use("/api/v1",contactRoute);
 
-app.get("*",(req,res)=>{
-    path.join(process.cwd(),'build','index.html')
-})
+// app.get("*",(req,res)=>{
+//     path.join(process.cwd(),'build','index.html')
+// })
 
 const PORT=process.env.PORT || 10000;
 
