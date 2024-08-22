@@ -10,16 +10,19 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-app.use(express.static(path.join(__dirname + "/static")));
 app.use("/api/v1",projectRoute);
 app.use("/api/v1",contactRoute);
+app.use(express.static(path.join(__dirname + "/client/build")));
+
 
 // app.get("*",(req,res)=>{
-//     path.join(process.cwd(),'build','index.html')
+//     res.sendFile(path.join(__dirname + '/client/build/index.html'))
 // })
+
+
 
 const PORT=process.env.PORT || 10000;
 
-app.listen(PORT, '127.0.0.1', () => {
-    console.log(`Server is running on http://127.0.0.1:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on ${PORT}`);
 });
