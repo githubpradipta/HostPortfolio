@@ -19,6 +19,7 @@
     }
     .text_area{
         margin: 0 !important;
+        width: 100%;
         text-align: center;
         margin-top: 30px !important;
         display: flex;
@@ -300,6 +301,16 @@
     color: rgba(0, 20, 39, 0.217);
     font-family: 'Coolvetica';
     z-index: 1;
+}
+
+/* animations */
+
+.animationText{
+    margin-top: 8px;
+}
+.animationText p{
+    margin: 0;
+    line-height: 0;
 }
 
 

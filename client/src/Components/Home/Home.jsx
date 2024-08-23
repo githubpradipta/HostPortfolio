@@ -4,14 +4,24 @@ import { Link } from 'react-router-dom'
 import heroImage from '../../assets/images/pro.JPG'
 import HashLoader from "react-spinners/HashLoader";
 import gif from '../../assets/images/webgif.gif'
+import gsap from 'gsap'
+import TextTypeAnimation from '../../UI/TextTypeAnimation';
+
+
 export default function Home() {
     const [loading, setLoading] = useState(false);
+
+    const title = gsap.utils.toArray('p');
+    console.log(title);
+    
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
         }, 1500);
     },[])
+
+
     return (
         <div className="con">
             <div className='container home_page'>
@@ -29,7 +39,12 @@ export default function Home() {
                             <div className="bgtext"><h1>PRADIPTA</h1></div>
                             <div className="text_area">
                                 <div className="left">
-                                    <h1>Hello, <br /> <span>I'm</span> Pradipta Banerjee <br />Web Developer</h1>
+                                    <h1>Hello👋
+                                        <br /> 
+                                        <span>I'm</span> Pradipta Banerjee
+                                        <br />
+                                        <TextTypeAnimation sequence={['Front-end Development',1000,'Back-end Development',1000,'DSA',1000]}/>
+                                    </h1>
                                 </div>
                                 <div className="right">
                                     <h2>

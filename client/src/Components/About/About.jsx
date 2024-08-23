@@ -29,12 +29,12 @@ export default function About() {
     }
     let skills = [
         "React.js",
-        "Node.js",
         "Express.js",
         "SQL",
         "MongoDB",
         "Git Bash",
         "Rest APIs",
+        "DSA",
     ]
 
     return (
